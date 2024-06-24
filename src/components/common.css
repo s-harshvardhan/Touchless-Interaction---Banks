@@ -1,0 +1,207 @@
+/* Common.css */
+
+body {
+    background-color: #343a40; /* Dark mode background color */
+    color: white; /* Text color */
+    letter-spacing: 2px;
+}
+
+.rectangle {
+    width: 200px;
+    height: 300px; /* Vertically long rectangle */
+    background-color: #212529; /* Darker shade for rectangle */
+    border-radius: 15px;
+    position: relative;
+    margin: 100px auto; /* Increased gap between the components */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent; /* Initial transparent border */
+    animation: pulse 2000ms infinite; /* Animation for border */
+}
+
+.circle {
+    width: 90px;
+    height: 90px;
+    background-color: white; /* Color of circle */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; /* Center the circle vertically */
+    left: 50%; /* Center the circle horizontally */
+    transform: translate(-50%, -50%);
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes pulse {
+    0% { border-color: transparent; }
+    50% { border-color: white; }
+    100% { border-color: transparent; }
+}
+
+.pixel {
+    width: 2px;
+    height: 2px;
+    background-color: white; /* Color of pixels */
+    position: absolute;
+    animation: blink 800ms infinite; /* Blink animation */
+}
+
+.card {
+    background-color: #212529; /* Darker shade for card background */
+    color: white; /* Text color */
+    /* width: 90%;  */
+    border-radius: 15px;
+    padding: 20px;
+    height: 700px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+/* .btn-light {
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 41%;
+} */
+
+.btn-light:hover {
+    background-color: #bdd6cd; 
+}
+
+.video-container {
+    position: relative;
+    height: 70%; 
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* White shadow for contrast */
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px; /* Rounded corners */
+}
+
+.facial-recognition {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px; /* Rounded corners */
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* White shadow for contrast */
+}
+
+.success-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #28a745; /* Green color for success message */
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.services-btn {
+    height: 82px;
+    width: 90%;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.sub-services-btn {
+    height: 82px;
+    width: 90%;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+}
+
+.money-btn-first {
+    height: 75px;
+    width: 90%;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Adjust height for lg breakpoint */
+@media (min-width: 992px) {
+    .services-btn {
+        height: 164px;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .sub-services-btn {
+        height: 164px;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .money-btn-first {
+        height: 150px;
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+.bottom-bar {
+    font-size: 10px;
+    /* background-color: rgb(240, 210, 210); */
+    border-radius: 40px;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.denomination-buttons {
+    font-size: 10px;
+    width: 100%;
+    border-radius: 25px;
+    margin: 0 !important;
+    letter-spacing: 3px;
+}
+
+.unavailable-denomination {
+    text-decoration: line-through;
+    background-color: #343a40 !important;
+}
+
+.cheque-image {
+    max-width: 60%;
+    height: auto;
+    border: #bdd6cd solid 2px; 
+    border-radius: 10px;
+    animation: pulsate 1s infinite;
+}
+
+@keyframes pulsate {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.confirm-button {
+    color: aliceblue !important;
+}
